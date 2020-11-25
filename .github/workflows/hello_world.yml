@@ -17,3 +17,9 @@ jobs:
       run: |
         git clone https://github.com/pgunnell/aws-test.git
         ls
+        
+    - name: change directory and run python script
+      run: |
+        cd aws-test
+        ls
+        python hello_world.py
