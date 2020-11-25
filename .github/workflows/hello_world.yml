@@ -23,6 +23,13 @@ jobs:
         cd aws-test
         ls
         python hello_world.py
+    
+    - name: Configure AWS credentials from Production account
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.PROD_AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.PROD_AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-west-2
 
     - name: copy the file to aws s3
       run: |
