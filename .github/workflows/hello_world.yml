@@ -26,5 +26,6 @@ jobs:
 
     - name: copy the file to aws s3
       run: |
+        cd aws-test
         ls
         aws s3 cp hello_world.py s3://aws-s3-pipeline-test/
