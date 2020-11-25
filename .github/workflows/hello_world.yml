@@ -12,3 +12,8 @@ jobs:
         echo Hello there!
         pwd
         ls
+
+    - name: clone the git repository
+      run: |
+        git clone https://github.com/pgunnell/aws-test.git
+        ls
