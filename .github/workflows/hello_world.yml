@@ -1,0 +1,12 @@
+name: Hello_World
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Print a greeting
+      run: |
+        echo Hello there!
