@@ -24,7 +24,7 @@ jobs:
         ls
         python hello_world.py
     
-    - name: Configure AWS credentials from Production account
+    - name: Configure AWS credentials for accessing S3 buckets
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
