@@ -23,6 +23,12 @@ jobs:
         cd aws-test
         ls
         python hello_world.py
+        
+    - name: try to install dependencies
+      run: |
+        sudo yum -y install python-pip
+        pip install numpy
+        pip install pandas
     
     - name: Configure AWS credentials for accessing S3 buckets
       uses: aws-actions/configure-aws-credentials@v1
