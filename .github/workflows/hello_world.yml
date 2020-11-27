@@ -26,7 +26,6 @@ jobs:
         
     - name: try to install dependencies
       run: |
-        sudo yum -y install python-pip
         pip install numpy
         pip install pandas
     
