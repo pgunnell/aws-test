@@ -1,0 +1,8 @@
+#!/bin/sh
+echo ".LOGON "$TERADATA_IP"/"$TERADATA_USER", "$TERADATA_PASSWORD"
+
+SELECT TOP 100 * FROM Test_Paolo;
+
+.LOGOFF
+.EXIT
+"
