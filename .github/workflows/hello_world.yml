@@ -42,6 +42,11 @@ jobs:
         ls
         aws s3 cp hello_world.py s3://aws-s3-pipeline-test/
         
+    - name: run bteq and sql query
+      run: |
+        cd aws-test
+        source setup_bteq.sh
+        
     # - name: adding tag to used bucket and pipeline (command for reference, only needed once)
     #  run: |
     #    aws s3api put-bucket-tagging --bucket aws-s3-pipeline-test --tagging 'TagSet=[{Key=806,Value=data-science}]'
